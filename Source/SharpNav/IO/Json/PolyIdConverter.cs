@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 
 namespace SharpNav.IO.Json
 {
-	class PolyIdConverter : JsonConverter
+	public class PolyIdConverter : JsonConverter
 	{
 		public override bool CanConvert(Type objectType)
 		{

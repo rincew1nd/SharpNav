@@ -372,6 +372,21 @@ namespace SharpNav
 		/// <param name="y">The Y coordinate of the tile.</param>
 		/// <param name="layer">The layer of the tile.</param>
 		/// <returns>The MeshTile at the specified location.</returns>
+		public NavTile GetFirstTileAtLayer(int layer)
+		{
+			var keys = tileSet.Where(t => t.Value.Any(v => v.Layer == 0)).Select(t => t.Key);
+			var minY = keys.Min(k => k.Y);
+			var minX = keys.Where(k => k.Y == minY).Min(k => k.X);
+			return GetTileAt(new Vector2i(minX, minY), layer);
+		}
+
+		/// <summary>
+		/// Find the tile at a specific location.
+		/// </summary>
+		/// <param name="x">The X coordinate of the tile.</param>
+		/// <param name="y">The Y coordinate of the tile.</param>
+		/// <param name="layer">The layer of the tile.</param>
+		/// <returns>The MeshTile at the specified location.</returns>
 		public NavTile GetTileAt(int x, int y, int layer)
 		{
 			return GetTileAt(new Vector2i(x, y), layer);

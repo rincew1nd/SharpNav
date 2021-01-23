@@ -142,6 +142,8 @@
     <Compile Include="IO\Json\NavMeshJsonSerializer.cs" />
     <Compile Include="IO\NavMeshConfigurationFile.cs" />
     <Compile Include="IO\NavMeshSerializer.cs" />
+    <Compile Include="IO\RecastAndDetour\NavMeshRndSerializer.cs" />
+    <Compile Include="IO\RecastAndDetour\RadNavMesh.cs" />
     <Compile Include="NavMesh.cs" />
     <Compile Include="NavMeshGenerationSettings.cs" />
     <Compile Include="Crowds\ObstacleAvoidanceQuery.cs" />
